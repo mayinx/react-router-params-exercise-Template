@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -5,4 +13,66 @@
 
 .App header a {
   margin: 0.5em;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Page--ShowUserResource {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5em;
+
+  width: 50vw;
+
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.Page--ShowUserResource .UserAttributes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Page--ShowUserResource .UserAttributes h2 {
+  border-bottom: 2px solid gray;
+  margin-bottom: 0.55rem;
+}
+
+.Page--ShowUserResource .UserAttributes p {
+  font-size: 1rem;
+}
+.UsersList {
+  list-style-type: none;
+  width: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UsersList li {
+  padding-bottom: 1rem;
+}
+
+.UsersList li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5em;
+
+  width: 70vw;
+
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
 }

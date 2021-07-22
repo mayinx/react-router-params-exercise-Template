@@ -21,12 +21,15 @@ export default function UsersPage() {
 
   function renderUsers() {
     return users.map((user) => {
-      const { first_name, last_name, id } = user;
+      const { first_name, last_name, id, avatar } = user;
 
       return (
         <li key={id}>
           <Link to={`/users/${id}`}>
-            {first_name} {last_name}{" "}
+            <img src={avatar} />
+            <span>
+              {first_name} {last_name}{" "}
+            </span>
           </Link>
         </li>
       );
@@ -42,7 +45,7 @@ export default function UsersPage() {
   return (
     <div>
       <h2> Here we fetch users </h2>
-      <ul>{renderUsers()}</ul>
+      <ul className="UsersList">{renderUsers()}</ul>
       {page < totalPages && (
         <button onClick={handleLoadMore}>Load more </button>
       )}
